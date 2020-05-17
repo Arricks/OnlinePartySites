@@ -1,24 +1,26 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# <アプリ名>
+C-DO（シード）
+カスタムダイヤモンドオーダー
 
-Things you may want to cover:
+## サイト概要
+ユーザーの希望するダイヤモンドアクセサリーを作成するサイト
 
-* Ruby version
+### サイトテーマ
+ダイヤモンドでキラキラする夢を実現するサイト
 
-* System dependencies
+### テーマを選んだ理由
+ダイヤの卸しをしている知り合いがいるので実現しそうなサイトを考えました
 
-* Configuration
+### ターゲットユーザ
+今まで既製品でラグジュアリーを楽しんできた富裕層
 
-* Database creation
+### 主な利用シーン
+自分のオリジナルダイヤモンドラグジュアリーを作りたいとき
 
-* Database initialization
+## 設計書
 
-* How to run the test suite
+### 機能一覧
+https://docs.google.com/spreadsheets/d/16lKHNDjeHwPxM6oA9d-K0pJdc9wI5vo5SoSigmLBPI0/edit?usp=sharing
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
