@@ -9,9 +9,7 @@
 	<%= form_for [:admins, @item] do |f| %>
 	<%= render 'layouts/error_messages', model: f.object %>
 	<div class="row">
-		<div class="col-xs-4 col-xs-offset-2">
-			<%= f.attachment_field :image, size: "200x200", fallback: "no_image.png" %>
-		</div><br><br>
+		<br><br>
 		<div class="col-xs-4 col-xs-offset-2 ">
 			<%= f.label :商品名 %>
 			<%= f.text_field :name %>
