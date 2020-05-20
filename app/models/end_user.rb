@@ -16,9 +16,9 @@ class EndUser < ApplicationRecord
   validates :address, presence: true
   validates :phone_number, presence: true, format: { with: /\A[0-9]+\z/ }
 
-  def active_for_authentication?
-    super && (self.is_deleted == "有効")
-  end
+  # def active_for_authentication?
+  #   super && (self.is_deleted == "有効")
+  # end
 
   enum is_deleted: {
     退会済: true,
