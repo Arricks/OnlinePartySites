@@ -8,29 +8,27 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-2 col-xs-offset-2">
-			<table>
+		<div class="col-xs-11 col-xs-offset-1">
+			<div class="i">
 				<tbody>
-
 					<% @items.each do |item| %>
-					<td>
+					<div class="a">
 						<div class="topbox">
 							<%= link_to item_path(item) do %>
 							<%= attachment_image_tag(item, :image, size: "200x200") %>
 							<% end %>
-						</div><br>
+						</div>
 						<%= link_to item_path(item) do %>
 						<div class="name">
-							商品名:
 							<%= item.name %><br>
 							¥
 							<%= item.non_taxed_price %>
-						</div><br>
-					</td>
-					<% end %>
+						</div>
+						<% end %>
+					</div>
 					<% end %>
 				</tbody>
-			</table>
+			</div>
 		</div>
 	</div>
 	<div class="row">

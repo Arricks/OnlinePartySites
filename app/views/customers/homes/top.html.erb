@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
-		<div class="col-xs-3">
+		<div class="col-xs-1">
+		</div>
+		<div class="col-xs-2">
 	  	<table border="1">
+	  		<br><br><br>
 			<tr>
 		  	<th>
 		  	<h3>ジャンル検索</h3>
@@ -20,11 +23,13 @@
 
 	<div class="col-xs-8">
 	  <div class="bgimg">
-	  	<div>
+        <% if end_user_signed_in? %>
+	  	  ようこそカスタムダイヤモンドオーダーサイトへ！<br>
+	  	<% else %>
 	  	  ようこそカスタムダイヤモンドオーダーサイトへ！<br>
 	  	  会員でない方も商品の閲覧はできますが、<br>
 	  	  購入には会員登録が必要になります。<br>
-	    </div>
+	  	<% end %>
 	  </div>
 	  <h1><strong>オススメ商品</strong></h1>
 	  	<table>
