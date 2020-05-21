@@ -15,9 +15,9 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <% if admins_user_signed_in? %>
-          <%= link_to admins_root_path do %><h3>C-DO</h3><% end %>
+          <%= link_to admins_root_path do %><h4>C-DO</h4><% end %>
           <% else %>
-          <%= link_to root_path do %><h3>C-DO</h3><% end %>
+          <%= link_to root_path do %><h4>C-DO</h4><% end %>
           <% end %>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -44,7 +44,7 @@
       </div>
     </nav>
 </header>
-<br><br>
+<br><br><br>
 <%= yield %>
 <br><br>
 <div></div>

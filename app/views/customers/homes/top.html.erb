@@ -4,13 +4,13 @@
 	  	<table border="1">
 			<tr>
 		  	<th>
-		  	<h2>ジャンル検索</h2>
+		  	<h3>ジャンル検索</h3>
 		  	</th>
 			</tr>
 	  	<tr>
 	  	  <td>
 	  	  	<% @genre.each do |genre| %>
-	  	  	  <h3><%=link_to genre.name, search_path(genre) %></h3><br>
+	  	  	  <h3><%=link_to genre.name, search_path(genre) %></h3>
 	  	  	<% end %>
 	  	  </td>
 	  	</tr>
@@ -33,12 +33,12 @@
 	  	<td>
 	  	<div class="topbox">
 		  	<%= link_to item_path(item) do %>
-		  		<%= item.attachment_image_tag :image, size: "150x150" %>
+		  		<%= attachment_image_tag item, :image, size: "150x150" %>
 		  	<% end %>
 			</div><br>
-			<div class="name">
+			<div class="name" align="center">
 		  	<%= link_to item_path(item) do %>
-		  		商品名: <%= item.name %><br>
+		  		<%= item.name %><br>
 		  		¥<%= (item.non_taxed_price).floor.to_s(:delimited) %>
 		  	</div><br>
 		  	<% end %>
