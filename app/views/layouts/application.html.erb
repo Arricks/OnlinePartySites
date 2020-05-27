@@ -15,9 +15,9 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <% if admins_user_signed_in? %>
-          <%= link_to admins_root_path do %><h4>C-DO</h4><% end %>
+          <%= link_to admins_root_path do %><%= image_tag asset_path "DIAMOND.jpg" %><% end %>
           <% else %>
-          <%= link_to root_path do %><h4>C-DO</h4><% end %>
+          <%= link_to root_path do %><%= image_tag asset_path "DIAMOND.jpg" %><% end %>
           <% end %>
         </div>
         <ul class="nav navbar-nav navbar-right">
