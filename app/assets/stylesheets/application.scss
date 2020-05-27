@@ -16,9 +16,6 @@
  @import "bootstrap-sprockets";  /*ここを追加*/
  @import "bootstrap";            /*ここを追加*/
 
- body {
-    background-image: image-url("hoge.jpg");
-}
 
 footer {
     width: 100%;
