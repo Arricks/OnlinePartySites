@@ -26,6 +26,7 @@
 						</div>
 						<% end %>
 	<!-- ここから -->
+<% if end_user_signed_in? %>
 <% if item.favorited_by?(current_end_user) %>
     <%= link_to item_favorites_path(item), method: :delete do %>
     <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
@@ -36,6 +37,7 @@
     <i class="fa fa-heart-o" aria-hidden="true"></i>
     <%= item.favorites.count %> いいね
     <% end %>
+<% end %>
 <% end %>
 <!-- ここまで -->
 					</div>
