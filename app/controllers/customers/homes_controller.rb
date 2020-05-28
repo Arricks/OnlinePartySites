@@ -1,6 +1,5 @@
 class Customers::HomesController < ApplicationController
 	def top
-	  @genre = Genre.all
 	  if params[:search]
 	  	@items = Item.all.search(params[:search])
 	  else

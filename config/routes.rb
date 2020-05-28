@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     post 'orders/confirm' => 'orders#confirm', as: :order_confirm
     resources :orders, only: [:index, :new, :create, :show]
     get 'homes/about' => 'homes#about', as: :about
-    get 'genres/:id' => 'genres#search', as: :search
+    get 'genres/:id' => 'genres#show', as: :genre
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

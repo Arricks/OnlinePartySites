@@ -19,8 +19,4 @@ class Item < ApplicationRecord
         favorites.where(end_user_id: end_user.id).exists?
     end
 
-    def self.search(search)
-      where('name LIKE ?', "%#{search}%")
-	end
-
 end
