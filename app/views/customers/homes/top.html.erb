@@ -1,29 +1,37 @@
 <div class="container">
   <div class="row">
-		<div class="col-xs-1">
-		</div>
-		<div class="col-xs-2">
-	  	<table border="1">
-	  		<br><br><br>
-			<tr>
-		  	<th>
-		  	<h3>ジャンル検索</h3>
-		  	</th>
-			</tr>
+	<div class="col-xs-1">
+	</div>
+	<div class="col-xs-2">
+	  <table border="1">
+	  	<br><br><br>
+		<tr>
+		  <th>
+		  <h3>ジャンル検索</h3>
+		  </th>
+		</tr>
 	  	<tr>
 	  	  <td>
 	  	  	<% @genre.each do |genre| %>
-	  	  	  <h3><%=link_to genre.name, search_path(genre) %></h3>
+	  	  	<h3><%=link_to genre.name, search_path(genre) %></h3>
 	  	  	<% end %>
 	  	  </td>
 	  	</tr>
-	  	</table>
-	  	<h3>検索</h3>
-		  <%= form_tag(root_path, method: :get) do %>
-		    <%= text_field_tag :search %>
-		    <%= submit_tag 'Search', name: nil %>
-		  <% end %>
-		</div>
+	  </table>
+	  <h3>検索</h3>
+
+<select id="pref-select" class="form-control">
+    <option value="ジャンル検索">ジャンル</option>
+    <% @genre.each do |genre| %>
+    <option value="genre.name"><%= genre.name %></option>
+    <% end %>
+</select><br>
+
+	  <%= form_tag(root_path, method: :get) do %>
+		<%= text_field_tag :search %>
+		<%= submit_tag 'Search', name: nil %>
+	  <% end %>
+	</div>
 
 
 	<div class="col-xs-8">
