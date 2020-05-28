@@ -20,13 +20,6 @@
 	  </table>
 	  <h3>検索</h3>
 
-<select id="pref-select" class="form-control">
-    <option value="ジャンル検索">ジャンル</option>
-    <% @genre.each do |genre| %>
-    <option value="genre.name"><%= genre.name %></option>
-    <% end %>
-</select><br>
-
 	  <%= form_tag(root_path, method: :get) do %>
 		<%= text_field_tag :search %>
 		<%= submit_tag 'Search', name: nil %>
@@ -44,7 +37,8 @@
 	  	  購入には会員登録が必要になります。<br>
 	  	<% end %>
 	  </div>
-	  <h1><strong>オススメ商品</strong></h1>
+	  <%= image_tag 'home.index.jpg', size: "760x200" %>
+	  <strong><h2>オススメ商品</h2></strong>
 	  	<table>
 	  	  <tbody>
 	  	<% @items.each do |item| %>

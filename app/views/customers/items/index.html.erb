@@ -4,6 +4,15 @@
 			<div class="title">
 				<h2>商品一覧</h2>
 				<label>(全 <%= @items.count %> 件)</label>
+
+
+<select id="pref-select" class="form-control">
+    <option value="ジャンル検索">ジャンル</option>
+    <% @genre.each do |genre| %>
+    <option value="genre.name"><%= genre.name %></option>
+    <% end %>
+</select>
+
 			</div>
 		</div>
 	</div>
