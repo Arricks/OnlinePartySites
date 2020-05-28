@@ -21,7 +21,7 @@
 	  <strong><h2>オススメ商品</h2></strong>
 	  <h5> ジャンル検索</h5>
 	  <% Genre.all.each do |genre| %>
-		<%= link_to genre.name, genre_path(genre) %>
+		<%= link_to genre.name, genre_path(genre) %>　
 	  <% end %>
 	  <table>
 	  	<tbody>
