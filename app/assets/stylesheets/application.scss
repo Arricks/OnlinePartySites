@@ -17,13 +17,34 @@
  @import "bootstrap";            /*ここを追加*/
 
 
+.wrapper {
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+.logo {
+	height: 50px;
+	width: 50px;
+}
+
+.navbar navbar-default navbar-fixed-top {
+	position: fixed;
+	background-color: white;
+    color: white;
+}
+
 footer {
     width: 100%;
-    height: 120px; 
+    height: 40px;
     text-align: center;
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: #848282;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
 }
+
 .footer-text {
     color: #fff;
 }

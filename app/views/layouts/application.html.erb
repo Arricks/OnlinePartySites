@@ -10,14 +10,15 @@
 </head>
 
 <body>
+  <div class="wrapper">
   <header>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <% if admins_user_signed_in? %>
-          <%= link_to admins_root_path do %><h4>C-DO</h4><% end %>
+          <%= link_to admins_root_path do %><%= image_tag asset_path "DIAMOND.jpg" %><% end %>
           <% else %>
-          <%= link_to root_path do %><h4>C-DO</h4><% end %>
+          <%= link_to root_path do %><%= image_tag asset_path "DIAMOND.jpg" %><% end %>
           <% end %>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -28,7 +29,12 @@
           <li><%= link_to ' ジャンル管理', admins_genres_path, class: "glyphicon glyphicon-star" %></li>
           <li><%= link_to ' ログアウト', destroy_admins_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %></li>
           <% elsif end_user_signed_in? %>
-          <li>ようこそ、<%= current_end_user.first_name %> <%= current_end_user.last_name %>さん</li>
+          <li>
+            <%= link_to end_user_path(current_end_user) do %>
+            ようこそ、
+            <%= current_end_user.first_name %> <%= current_end_user.last_name %>さん
+            <% end %>
+          </li>
           <li><%= link_to ' マイページ', end_user_path(current_end_user), class: "glyphicon glyphicon-home" %></li>
           <li><%= link_to ' ダイヤモンドについて', about_path, class: "glyphicon glyphicon-comment" %></li>
           <li><%= link_to ' 商品一覧', items_path, class: "glyphicon glyphicon-gift" %></li>
@@ -45,11 +51,17 @@
     </nav>
 </header>
 <br><br><br>
-<%= yield %>
+
+<div class="container">
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
 <br><br>
 <div></div>
 <footer>
   <p class="footer-text">© All rights recerved by Infratop.Inc.</p>
 </footer>
+</div>
 </body>
 </html>
